@@ -9,24 +9,19 @@ import org.testng.annotations.Test;
 public class DemoTest {
     @Test
     public void demoTest(){
+        WebDriver driver;
         if(ConfigReader.getConfig().browser().equalsIgnoreCase("chrome")) {
-            WebDriver driver = new ChromeDriver();
-            driver.manage().window().maximize();
-            driver.get("https://the-internet.herokuapp.com/login");
-            String title = driver.getTitle();
-            System.out.println("title = " + title);
-            String currentUrl = driver.getCurrentUrl();
-            System.out.println("currentUrl = " + currentUrl);
-            driver.quit();
+            driver = new ChromeDriver();
         }else{
-            WebDriver driver = new FirefoxDriver();
-            driver.manage().window().maximize();
-            driver.get("https://the-internet.herokuapp.com/login");
-            String title = driver.getTitle();
-            System.out.println("title = " + title);
-            String currentUrl = driver.getCurrentUrl();
-            System.out.println("currentUrl = " + currentUrl);
-            driver.quit();
+            driver = new FirefoxDriver();
         }
+
+        driver.get("https://the-internet.herokuapp.com/login");
+        String title = driver.getTitle();
+        System.out.println("title = " + title);
+        String currentUrl = driver.getCurrentUrl();
+        System.out.println("currentUrl = " + currentUrl);
+        driver.manage().window().maximize();
+        driver.quit();
     }
 }
