@@ -15,6 +15,7 @@
         <selenium.version>4.24.0</selenium.version>
         <testng.version>7.10.2</testng.version>
         <owner.version>1.0.12</owner.version>
+        <java.client.version>9.3.0</java.client.version>
     </properties>
     <dependencies>
         <dependency>
@@ -34,6 +35,12 @@
             <artifactId>owner</artifactId>
             <version>${owner.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>${java.client.version}</version>
+        </dependency>
+
     </dependencies>
 
 </project>
