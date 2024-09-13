@@ -23,7 +23,6 @@
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -40,7 +39,6 @@
             <artifactId>java-client</artifactId>
             <version>${java.client.version}</version>
         </dependency>
-
     </dependencies>
 
 </project>
