@@ -1,6 +1,6 @@
 package com.bagal.configs;
 
-import com.bagal.RunModeTypes;
+import com.bagal.enums.RunModeTypes;
 import com.bagal.convertors.StringToRunModeTypeConvertor;
 import org.aeonbits.owner.Config;
 
