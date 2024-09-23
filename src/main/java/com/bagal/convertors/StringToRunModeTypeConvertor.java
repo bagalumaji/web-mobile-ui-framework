@@ -1,6 +1,6 @@
 package com.bagal.convertors;
 
-import com.bagal.RunModeTypes;
+import com.bagal.enums.RunModeTypes;
 import org.aeonbits.owner.Converter;
 
 import java.lang.reflect.Method;
