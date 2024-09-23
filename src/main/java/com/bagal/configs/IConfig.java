@@ -19,4 +19,6 @@ public interface IConfig extends Config {
     @ConverterClass(value = StringToRunModeTypeConvertor.class)
     @DefaultValue(value = "web")
     RunModeTypes runMode();
+
+    String executionMode();
 }
