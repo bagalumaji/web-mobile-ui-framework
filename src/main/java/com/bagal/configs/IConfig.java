@@ -1,5 +1,7 @@
 package com.bagal.configs;
 
+import com.bagal.convertors.StringToBrowserTypeConvertor;
+import com.bagal.enums.BrowserTypes;
 import com.bagal.enums.RunModeTypes;
 import com.bagal.convertors.StringToRunModeTypeConvertor;
 import org.aeonbits.owner.Config;
@@ -14,7 +16,8 @@ import org.aeonbits.owner.Config;
 public interface IConfig extends Config {
     @Key("browser")
     @DefaultValue("chrome")
-    String browser();
+    @ConverterClass(value = StringToBrowserTypeConvertor.class)
+    BrowserTypes browser();
 
     @ConverterClass(value = StringToRunModeTypeConvertor.class)
     @DefaultValue(value = "web")
