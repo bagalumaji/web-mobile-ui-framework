@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 public class WebDemoTest extends WebTestSetup {
     @Test
     public void demoTest(){
-        DriverManager.getWebDriver().manage().window().maximize();
         DriverManager.getWebDriver().get("https://the-internet.herokuapp.com/login");
         String title = DriverManager.getWebDriver().getTitle();
         System.out.println("title = " + title);
