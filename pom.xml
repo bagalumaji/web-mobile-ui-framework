@@ -16,6 +16,7 @@
         <testng.version>7.10.2</testng.version>
         <owner.version>1.0.12</owner.version>
         <java.client.version>9.3.0</java.client.version>
+        <lombok.version>1.18.34</lombok.version>
     </properties>
     <dependencies>
         <dependency>
@@ -39,6 +40,14 @@
             <artifactId>java-client</artifactId>
             <version>${java.client.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
 </project>
