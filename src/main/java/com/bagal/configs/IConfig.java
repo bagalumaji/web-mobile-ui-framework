@@ -1,10 +1,10 @@
 package com.bagal.configs;
 
-import com.bagal.convertors.StringToBrowserTypeConvertor;
-import com.bagal.enums.BrowserTypes;
-import com.bagal.enums.RunModeTypes;
-import com.bagal.convertors.StringToRunModeTypeConvertor;
+import com.bagal.configs.convertors.*;
+import com.bagal.enums.*;
 import org.aeonbits.owner.Config;
+
+import java.net.URL;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
@@ -14,14 +14,33 @@ import org.aeonbits.owner.Config;
         "file://${user.dir}/src/test/resources/stag-config.properties"
 })
 public interface IConfig extends Config {
-    @Key("browser")
+    @Key("web.browser")
     @DefaultValue("chrome")
-    @ConverterClass(value = StringToBrowserTypeConvertor.class)
-    BrowserTypes browser();
+    @ConverterClass(value = StringToWebBrowserTypeConvertor.class)
+    WebBrowser webBrowser();
 
-    @ConverterClass(value = StringToRunModeTypeConvertor.class)
+    @ConverterClass(value = StringToExecutionPlatformTypeConvertor.class)
     @DefaultValue(value = "web")
-    RunModeTypes runMode();
+    @Key("execution.platform")
+    ExecutionPlatform executionPlatform();
 
-    String executionMode();
+    @Key("execution.mode")
+    @DefaultValue("local")
+    @ConverterClass(value = StringToExecutionModeTypeConvertor.class)
+    ExecutionMode executionMode();
+
+    @Key("remote.service")
+    @ConverterClass(value = StringToRemoteServiceTypeConvertor.class)
+    RemoteService remoteService();
+
+    @Key("mobile.platform")
+    @DefaultValue("android")
+    @ConverterClass(value = StringToMobilePlatformTypeConvertor.class)
+    MobilePlatform mobilePlatform();
+
+    @ConverterClass(value = StringToUrlConvertor.class)
+    URL browserStackUrl();
+
+    @ConverterClass(value = StringToUrlConvertor.class)
+    URL lambdaTestUrl();
 }
