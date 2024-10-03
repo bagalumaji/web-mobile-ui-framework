@@ -1,5 +1,5 @@
 package com.bagal.enums;
 
-public enum BrowserTypes {
+public enum WebBrowser {
     CHROME,FIREFOX
 }
