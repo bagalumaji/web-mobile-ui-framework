@@ -1,5 +1,5 @@
 package com.bagal.enums;
 
-public enum RunModeTypes {
+public enum ExecutionPlatform {
     MOBILE,WEB
 }
