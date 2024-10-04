@@ -12,11 +12,27 @@ import java.net.URL;
         "file://${user.dir}/src/test/resources/browser-stack.properties"
 })
 public interface BrowserStackConfig extends Config {
+    String os();
 
-    String username();
-    String key();
+    String osVersion();
+
+    String browserVersion();
+
+    String consoleLogs();
+
+    String seleniumVersion();
+
+    String projectName();
+
+    String buildName();
+
+    @Key("userName")
+    String userName();
+
+    @Key("accessKey")
+    String accessKey();
 
     @ConverterClass(value = StringToUrlConvertor.class)
-    @DefaultValue("https://${username}:${key}@hub-cloud.browserstack.com/wd/hub")
+    @DefaultValue("https://${userName}:${accessKey}@hub-cloud.browserstack.com/wd/hub")
     URL browserStackUrl();
 }
