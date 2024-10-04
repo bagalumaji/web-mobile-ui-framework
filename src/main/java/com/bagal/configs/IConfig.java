@@ -39,7 +39,8 @@ public interface IConfig extends Config {
     MobilePlatform mobilePlatform();
 
     @ConverterClass(value = StringToUrlConvertor.class)
-    URL browserStackUrl();
+    @DefaultValue("http://127.0.0.1:4723/wd/hub")
+    URL localAppiumServerUrl();
 
     @ConverterClass(value = StringToUrlConvertor.class)
     URL lambdaTestUrl();
