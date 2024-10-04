@@ -1,4 +1,4 @@
-package com.bagal.driver.web.local;
+package com.bagal.driver.factory.web.local;
 
 import com.bagal.driver.manager.web.local.LocalChromeManager;
 import com.bagal.driver.manager.web.local.LocalFirefoxManager;
