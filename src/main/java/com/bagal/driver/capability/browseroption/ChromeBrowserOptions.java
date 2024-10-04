@@ -1,4 +1,4 @@
-package com.bagal.driver.brwoseroptions;
+package com.bagal.driver.capability.browseroption;
 
 import org.openqa.selenium.chrome.ChromeOptions;
 
