@@ -1,6 +1,6 @@
 package com.bagal.testsetup;
 
-import com.bagal.driver.web.Driver;
+import com.bagal.driver.factory.web.Driver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
