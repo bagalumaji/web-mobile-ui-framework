@@ -1,4 +1,4 @@
-package com.bagal.driver.web.remote;
+package com.bagal.driver.factory.web.remote;
 
 import com.bagal.driver.manager.web.remote.browserstack.BrowserStackChromeManager;
 import com.bagal.driver.manager.web.remote.browserstack.BrowserStackFirefoxManager;
