@@ -1,4 +1,4 @@
-package com.bagal.driver.web;
+package com.bagal.driver.factory.web;
 
 public interface IDriver {
     default void intiDriver(){};
