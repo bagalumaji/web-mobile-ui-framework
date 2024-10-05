@@ -1,4 +1,10 @@
 package com.bagal.driver.manager.mobile.remote.lambdatest;
 
-public class LambdaTestAndroidManager {
+import org.openqa.selenium.WebDriver;
+
+public final class LambdaTestAndroidManager {
+    private LambdaTestAndroidManager() {}
+    public static WebDriver getDriver() {
+        return null;
+    }
 }
