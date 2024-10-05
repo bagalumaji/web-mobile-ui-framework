@@ -16,7 +16,6 @@ public final class RemoteMobileDriverFactory {
         MAP.put(RemoteService.BROWSER_STACK,BrowserStackMobileFactory::getDriver);
     }
     public static WebDriver getDriver(RemoteService remoteService,MobilePlatform platform) {
-       return
-               MAP.get(remoteService).apply(platform);
+       return MAP.get(remoteService).apply(platform);
     }
 }
