@@ -16,7 +16,7 @@ public final class LocalMobileDriverFactory {
         MAP.put(MobilePlatform.ANDROID, LocalAndroidManager::getDriver);
         MAP.put(MobilePlatform.IOS, LocalIosManager::getDriver);
     }
-    public static WebDriver get(MobilePlatform platform) {
+    public static WebDriver getDriver(MobilePlatform platform) {
         return MAP.get(platform).get();
     }
 }
