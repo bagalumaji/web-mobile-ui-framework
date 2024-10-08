@@ -22,7 +22,7 @@ public final class Driver {
                 .remoteService(ConfigReader.getConfig().remoteService())
                 .webBrowser(ConfigReader.getConfig().webBrowser())
                 .build();
-       WebDriver driver= DriverFactory.getDriver(driverData);
+       WebDriver driver= DriverFactory.getWebDriver(driverData);
 
     }
     public static void intializeMobileDriver() {
@@ -32,6 +32,6 @@ public final class Driver {
                 .remoteService(ConfigReader.getConfig().remoteService())
                 .mobilePlatform(ConfigReader.getConfig().mobilePlatform())
                 .build();
-        WebDriver driver= DriverFactory.getDriver(driverData);
+        WebDriver driver= DriverFactory.getMobileDriver(driverData);
     }
 }
