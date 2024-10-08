@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 public final class LocalAndroidManager {
     private LocalAndroidManager() {}
     public static WebDriver getDriver() {
-        return new AndroidDriver(ConfigReader.getConfig().localAppiumServerUrl(), new UiAutomator2Options());
+        UiAutomator2Options options = new UiAutomator2Options();
+        options.setApp(System.getProperty("user.dir")+"/src/test/resources/apps/mda-2.1.0-24.apk");
+        return new AndroidDriver(ConfigReader.getConfig().localAppiumServerUrl(), options);
     }
 }
