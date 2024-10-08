@@ -1,13 +1,13 @@
 package com.bagal.testsetup;
 
-import com.bagal.driver.factory.web.Driver;
+import com.bagal.driver.Driver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class WebTestSetup {
     @BeforeMethod
     public void setup(){
-        Driver.initDriver();
+        //Driver.initDriver();
     }
     @AfterMethod
     public void teardown(){
