@@ -7,9 +7,9 @@ import lombok.Getter;
 @Builder
 @Getter
 public class DriverData {
-    WebBrowser webBrowser;
-    ExecutionMode executionMode;
-    ExecutionPlatform executionPlatform;
-    MobilePlatform mobilePlatform;
-    RemoteService remoteService;
+   private ExecutionMode executionMode;
+   private ExecutionPlatform executionPlatform;
+   private RemoteService remoteService;
+   private WebBrowser webBrowser;
+   private MobilePlatform mobilePlatform;
 }
