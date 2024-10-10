@@ -14,16 +14,9 @@ public final class DriverFactory {
     }
 
     public static WebDriver getWebDriver(WebDriverData webDriverData) {
-//        if (webDriverData.getExecutionMode() == ExecutionMode.LOCAL) {
-//            return LocalDriverFactory.getWebDriver(webDriverData.getWebBrowser());
-//        } else {
-//            return RemoteDriverFactory.getDriver(webDriverData.getRemoteService(), webDriverData.getWebBrowser());
-//        }
         return webDriverData.getExecutionMode() == ExecutionMode.LOCAL
                 ? new LocalWebDriverImpl().getDriver(webDriverData)
                 : new RemoteWebDriverImpl().getDriver(webDriverData);
-
-
     }
 
 
