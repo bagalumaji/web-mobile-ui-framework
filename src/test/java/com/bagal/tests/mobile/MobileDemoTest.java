@@ -1,5 +1,7 @@
 package com.bagal.tests.mobile;
 
+import com.bagal.driver.Driver;
+import com.bagal.driver.manager.DriverManager;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.ios.IOSDriver;
@@ -37,5 +39,11 @@ public final class MobileDemoTest {
         IOSDriver driver = new IOSDriver(new URL("http://127.0.0.1:4723"), options);
         Thread.sleep(10000);
         driver.quit();
+    }
+    @Test
+    public void demoTest(){
+        Driver.intializeWebDriver();
+        DriverManager.getWebDriver().get("https://www.google.com");
+        Driver.closeDriver();
     }
 }
