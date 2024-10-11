@@ -19,7 +19,7 @@ public final class LocalDriverFactory {
         MAP.put(WebBrowser.FIREFOX, LocalFirefoxManager::getDriver);
     }
 
-    public static WebDriver getWebDriver(WebBrowser webBrowser) {
+    public static WebDriver geDriver(WebBrowser webBrowser) {
        return MAP.get(webBrowser).get();
     }
 }
