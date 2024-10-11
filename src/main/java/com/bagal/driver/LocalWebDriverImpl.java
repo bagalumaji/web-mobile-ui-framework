@@ -7,6 +7,6 @@ import org.openqa.selenium.WebDriver;
 public class LocalWebDriverImpl implements IWebDriver{
     @Override
     public WebDriver getDriver(WebDriverData webDriverData) {
-        return LocalDriverFactory.getWebDriver(webDriverData.getWebBrowser());
+        return LocalDriverFactory.geDriver(webDriverData.getWebBrowser());
     }
 }
