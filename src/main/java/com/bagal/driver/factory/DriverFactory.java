@@ -1,9 +1,9 @@
 package com.bagal.driver.factory;
 
+import com.bagal.driver.LocalMobileDriverImpl;
 import com.bagal.driver.LocalWebDriverImpl;
+import com.bagal.driver.RemoteMobileDriverImpl;
 import com.bagal.driver.RemoteWebDriverImpl;
-import com.bagal.driver.factory.mobile.local.LocalMobileDriverFactory;
-import com.bagal.driver.factory.mobile.remote.RemoteMobileDriverFactory;
 import com.bagal.entity.MobileDriverData;
 import com.bagal.entity.WebDriverData;
 import com.bagal.enums.ExecutionMode;
@@ -22,10 +22,8 @@ public final class DriverFactory {
 
 
     public static WebDriver getMobileDriver(MobileDriverData mobileDriverData) {
-        if (mobileDriverData.getExecutionMode() == ExecutionMode.LOCAL) {
-            return LocalMobileDriverFactory.getDriver(mobileDriverData.getMobilePlatform());
-        } else {
-            return RemoteMobileDriverFactory.getDriver(mobileDriverData.getRemoteService(), mobileDriverData.getMobilePlatform());
-        }
+        return mobileDriverData.getExecutionMode() == ExecutionMode.LOCAL
+                ? new LocalMobileDriverImpl().getDriver(mobileDriverData)
+                : new RemoteMobileDriverImpl().getDriver(mobileDriverData);
     }
 }
