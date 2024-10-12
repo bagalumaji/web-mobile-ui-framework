@@ -12,7 +12,7 @@ public final class Driver {
     }
 
     public static void closeDriver() {
-        DriverManager.getWebDriver().quit();
+        DriverManager.getDriver().quit();
         DriverManager.unload();
     }
 
@@ -24,7 +24,7 @@ public final class Driver {
                 .webBrowser(ConfigReader.getConfig().webBrowser())
                 .build();
         WebDriver driver = DriverFactory.getWebDriver(webDriverData);
-        DriverManager.setWebDriver(driver);
+        DriverManager.setDriver(driver);
     }
 
     public static void intializeMobileDriver() {
@@ -35,6 +35,6 @@ public final class Driver {
                 .mobilePlatform(ConfigReader.getConfig().mobilePlatform())
                 .build();
         WebDriver driver = DriverFactory.getMobileDriver(mobileDriverData);
-        DriverManager.setWebDriver(driver);
+        DriverManager.setDriver(driver);
     }
 }
