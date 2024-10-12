@@ -41,9 +41,9 @@ public final class MobileDemoTest {
         driver.quit();
     }
     @Test
-    public void demoTest(){
-        Driver.intializeWebDriver();
-        DriverManager.getWebDriver().get("https://www.google.com");
-        Driver.closeDriver();
+    public void demoTest() throws InterruptedException {
+       Driver.intializeMobileDriver();
+       Thread.sleep(10000);
+       Driver.closeDriver();
     }
 }
