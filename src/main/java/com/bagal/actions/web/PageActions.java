@@ -1,4 +1,4 @@
-package com.bagal.actions;
+package com.bagal.actions.web;
 
 public final class PageActions {
     private PageActions() {}
