@@ -5,4 +5,5 @@ public class MobileActions {
     public static void click(){
 
     }
+    public static void enterText(String text){}
 }
