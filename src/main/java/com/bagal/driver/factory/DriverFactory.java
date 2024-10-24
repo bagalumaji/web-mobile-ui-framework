@@ -1,8 +1,8 @@
 package com.bagal.driver.factory;
 
 import com.bagal.driver.*;
-import com.bagal.entity.MobileDriverData;
-import com.bagal.entity.WebDriverData;
+import com.bagal.entities.MobileDriverData;
+import com.bagal.entities.WebDriverData;
 import com.bagal.enums.ExecutionMode;
 import org.openqa.selenium.WebDriver;
 

@@ -1,4 +1,4 @@
-package com.bagal.entity;
+package com.bagal.entities;
 
 import com.bagal.enums.*;
 import lombok.Builder;
