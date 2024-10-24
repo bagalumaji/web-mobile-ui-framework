@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 public class WebTestSetup {
     @BeforeMethod
     public void setup(){
-        //Driver.initDriver();
+       Driver.intializeWebDriver();
     }
     @AfterMethod
     public void teardown(){
