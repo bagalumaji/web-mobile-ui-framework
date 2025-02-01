@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public final class MobileDemo2Test {
     @Test
     public void demoTest() throws InterruptedException {
-       Driver.intializeMobileDriver();
+       Driver.initializeDriver();
        Thread.sleep(10000);
        Driver.closeDriver();
     }
