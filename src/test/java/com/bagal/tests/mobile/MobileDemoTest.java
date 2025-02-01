@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public final class MobileDemoTest {
     @Test
     public void demoTest() {
-       Driver.intializeMobileDriver();
+       Driver.initializeDriver();
         WaitForTimeout.waitForTimeout(10);
        Driver.closeDriver();
     }
