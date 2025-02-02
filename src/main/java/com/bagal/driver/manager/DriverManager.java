@@ -33,39 +33,3 @@ public final class DriverManager {
         CONTEXT.remove();
     }
 }
-
-//public final class DriverManager {
-//    private DriverManager() {
-//    }
-//
-//    private final static ThreadLocal<WebDriver> WEB_DRIVER_THREAD_LOCAL = new ThreadLocal<>();
-//    private final static ThreadLocal<WebDriver> MOBILE_DRIVER_THREAD_LOCAL = new ThreadLocal<>();
-//    private final static ThreadLocal<ExecutionPlatform> CONTEXT = new ThreadLocal<>();
-//    private final static Map<ExecutionPlatform,ThreadLocal<WebDriver>> EXECUTION_PLATFORM_THREAD_LOCAL = new EnumMap<>(ExecutionPlatform.class);
-//
-//
-//    public static WebDriver getDriver() {
-//        return CONTEXT.get()==ExecutionPlatform.WEB?WEB_DRIVER_THREAD_LOCAL.get():MOBILE_DRIVER_THREAD_LOCAL.get();
-//    }
-//
-//    public static void setDriver(WebDriver driver) {
-//        if (isMobileDriver(driver)) {
-//            MOBILE_DRIVER_THREAD_LOCAL.set(driver);
-//            EXECUTION_PLATFORM_THREAD_LOCAL.put(ExecutionPlatform.MOBILE,MOBILE_DRIVER_THREAD_LOCAL);
-//            CONTEXT.set(ExecutionPlatform.MOBILE);
-//        } else {
-//            WEB_DRIVER_THREAD_LOCAL.set(driver);
-//            EXECUTION_PLATFORM_THREAD_LOCAL.put(ExecutionPlatform.WEB,WEB_DRIVER_THREAD_LOCAL);
-//            CONTEXT.set(ExecutionPlatform.WEB);
-//        }
-//    }
-//
-//    private static boolean isMobileDriver(WebDriver driver) {
-//        return driver instanceof AndroidDriver || driver instanceof IOSDriver;
-//    }
-//    public static void unload() {
-//        WEB_DRIVER_THREAD_LOCAL.remove();
-//        MOBILE_DRIVER_THREAD_LOCAL.remove();
-//        CONTEXT.remove();
-//    }
-//}

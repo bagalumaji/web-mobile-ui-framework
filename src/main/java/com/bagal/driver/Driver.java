@@ -38,34 +38,3 @@ public final class Driver {
         DriverManager.setDriver(driver);
     }
 }
-//public final class Driver {
-//    private Driver() {
-//    }
-//
-//    public static void closeDriver() {
-//        DriverManager.getDriver().quit();
-//        DriverManager.unload();
-//    }
-//
-//    public static void intializeWebDriver() {
-//        WebDriverData webDriverData = WebDriverData.builder()
-//                .executionMode(ConfigReader.getConfig().executionMode())
-//                .executionPlatform(ConfigReader.getConfig().executionPlatform())
-//                .remoteService(ConfigReader.getConfig().remoteService())
-//                .webBrowser(ConfigReader.getConfig().webBrowser())
-//                .build();
-//        WebDriver driver = DriverFactory.getWebDriver(webDriverData);
-//        DriverManager.setDriver(driver);
-//    }
-//
-//    public static void intializeMobileDriver() {
-//        MobileDriverData mobileDriverData = MobileDriverData.builder()
-//                .executionMode(ConfigReader.getConfig().executionMode())
-//                .executionPlatform(ConfigReader.getConfig().executionPlatform())
-//                .remoteService(ConfigReader.getConfig().remoteService())
-//                .mobilePlatform(ConfigReader.getConfig().mobilePlatform())
-//                .build();
-//        WebDriver driver = DriverFactory.getMobileDriver(mobileDriverData);
-//        DriverManager.setDriver(driver);
-//    }
-//}
