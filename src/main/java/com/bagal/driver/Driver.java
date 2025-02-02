@@ -17,7 +17,7 @@ public final class Driver {
 
     public static void initializeDriver() {
         WebDriver driver;
-        if (ConfigReader.getConfig().executionPlatform() == ExecutionPlatform.WEB) {
+        if (ConfigReader.getConfig().executionPlatform() == ExecutionPlatform.MOBILE) {
             MobileDriverData mobileDriverData = MobileDriverData.builder()
                     .executionMode(ConfigReader.getConfig().executionMode())
                     .executionPlatform(ConfigReader.getConfig().executionPlatform())
@@ -33,6 +33,7 @@ public final class Driver {
                     .webBrowser(ConfigReader.getConfig().webBrowser())
                     .build();
             driver = DriverFactory.getWebDriver(webDriverData);
+            driver.manage().window().maximize();
         }
         DriverManager.setDriver(driver);
     }
